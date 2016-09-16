@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,10 +18,87 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uoH-BT-RPV" customClass="FingerPaintView">
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MRm-pK-2d3">
+                                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="redPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pCN-XF-Lbj"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ctb-z7-apa">
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="bluePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PYD-nt-49N"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7pd-XQ-L8X">
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="blackPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nQh-MN-BCG"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="MRm-pK-2d3" firstAttribute="leading" secondItem="Ctb-z7-apa" secondAttribute="trailing" constant="10" id="8ZA-zC-TxV"/>
+                                    <constraint firstItem="Ctb-z7-apa" firstAttribute="leading" secondItem="7pd-XQ-L8X" secondAttribute="trailing" constant="10" id="ndm-fs-pjy"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DLu-s4-SaX">
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Erase"/>
+                                <connections>
+                                    <action selector="erasePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j3J-1a-U3Y"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oEK-4k-B6H">
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="QOR-jr-DHg"/>
+                                </constraints>
+                                <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Clear">
+                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N2G-rE-3iS"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="DLu-s4-SaX" firstAttribute="leading" secondItem="MRm-pK-2d3" secondAttribute="trailing" constant="10" id="2yf-24-QAu"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="oEK-4k-B6H" secondAttribute="bottom" constant="8" id="6DY-Yy-8Hp"/>
+                            <constraint firstItem="uoH-BT-RPV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7ez-Pc-Y7H"/>
+                            <constraint firstItem="DLu-s4-SaX" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="Be7-O0-F25"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="DLu-s4-SaX" secondAttribute="trailing" id="HEI-TF-ZDL"/>
+                            <constraint firstItem="Ctb-z7-apa" firstAttribute="centerY" secondItem="DLu-s4-SaX" secondAttribute="centerY" id="ZNq-Of-R3G"/>
+                            <constraint firstItem="uoH-BT-RPV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ahA-LB-9zh"/>
+                            <constraint firstItem="7pd-XQ-L8X" firstAttribute="centerY" secondItem="DLu-s4-SaX" secondAttribute="centerY" id="gy9-yH-Dri"/>
+                            <constraint firstItem="uoH-BT-RPV" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="lEU-Kx-w2G"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="oEK-4k-B6H" secondAttribute="trailing" id="no2-e0-jXq"/>
+                            <constraint firstItem="MRm-pK-2d3" firstAttribute="centerY" secondItem="DLu-s4-SaX" secondAttribute="centerY" id="uXQ-lm-K0M"/>
+                            <constraint firstItem="uoH-BT-RPV" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="yC7-En-dAB"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="um5-gx-bC5" appends="YES" id="MqH-ng-Ose"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="fingerPaintView" destination="uoH-BT-RPV" id="0AK-YZ-Mih"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="um5-gx-bC5">
+                    <connections>
+                        <action selector="panGestureOccured:" destination="BYZ-38-t0r" id="FmB-cd-UY8"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
         </scene>
     </scenes>

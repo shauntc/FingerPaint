@@ -13,6 +13,7 @@
 		280823EE1D8C80C200065E12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 280823EC1D8C80C200065E12 /* Main.storyboard */; };
 		280823F01D8C80C200065E12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 280823EF1D8C80C200065E12 /* Assets.xcassets */; };
 		280823F31D8C80C200065E12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 280823F11D8C80C200065E12 /* LaunchScreen.storyboard */; };
+		280823FC1D8C813700065E12 /* FingerPaintView.m in Sources */ = {isa = PBXBuildFile; fileRef = 280823FB1D8C813700065E12 /* FingerPaintView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		280823EF1D8C80C200065E12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		280823F21D8C80C200065E12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		280823F41D8C80C200065E12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		280823FA1D8C813700065E12 /* FingerPaintView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FingerPaintView.h; sourceTree = "<group>"; };
+		280823FB1D8C813700065E12 /* FingerPaintView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FingerPaintView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +70,8 @@
 				280823F11D8C80C200065E12 /* LaunchScreen.storyboard */,
 				280823F41D8C80C200065E12 /* Info.plist */,
 				280823E31D8C80C200065E12 /* Supporting Files */,
+				280823FA1D8C813700065E12 /* FingerPaintView.h */,
+				280823FB1D8C813700065E12 /* FingerPaintView.m */,
 			);
 			path = FingerPaint;
 			sourceTree = "<group>";
@@ -152,6 +157,7 @@
 			files = (
 				280823EB1D8C80C200065E12 /* ViewController.m in Sources */,
 				280823E81D8C80C200065E12 /* AppDelegate.m in Sources */,
+				280823FC1D8C813700065E12 /* FingerPaintView.m in Sources */,
 				280823E51D8C80C200065E12 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
